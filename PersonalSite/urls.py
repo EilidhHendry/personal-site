@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
+    url(r'^$', 'home.views.index'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', 'blogengine.views.getRecentPosts'),
     url(r'^post/(?P<pk>[0-9]+)/$', 'blogengine.views.post_detail', name='post_detail'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
