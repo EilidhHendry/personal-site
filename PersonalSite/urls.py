@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', 'blogengine.views.getRecentPosts'),
+    url(r'^post/(?P<pk>[0-9]+)/$', 'blogengine.views.post_detail', name='post_detail'),
 ]
