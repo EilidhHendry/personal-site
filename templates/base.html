@@ -1,14 +1,22 @@
 {% load staticfiles %}
 <html>
     <head>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <title>My Django Blog</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <title>Eilidh's Site</title>
     </head>
     <body>
         <div class="page-header">
-            <h1><a href="/">Eilidh's Site</a></h1>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Eilidh's Site</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/blog"/>Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <div class="content container">
             <div class="row">
@@ -17,5 +25,7 @@
                     {% endblock %}
                 </div>                                                                  </div>
         </div>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
     </body>
 </html>
