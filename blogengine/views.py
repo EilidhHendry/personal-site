@@ -6,8 +6,8 @@ def getRecentPosts(request):
 
     sorted_posts = posts.order_by('-published_date')
 
-    return render_to_response('posts.html', {'posts':sorted_posts})
+    return render_to_response('blog/posts.html', {'posts':sorted_posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'post_detail.html', {'post': post})
+    return render(request, 'blog/post_detail.html', {'post': post})
