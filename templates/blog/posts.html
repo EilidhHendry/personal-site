@@ -2,10 +2,37 @@
 
 {% block content %}
     {% for post in posts %}
-    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <h3>{{ post.published_date }}</h3>
-        {{ post.text }}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div> 
+            {{ post.published_date }}
+        </div>
+        <div class="panel-body">
+            {{ post.text | truncatewords:200 }} 
+            <a href="{% url 'post_detail' pk=post.pk %}"> Read more </a>
+        </div>
+    </div>
     {% endfor %}
+
+    <ul class="pagination">
+        <li>
+            {% if posts.has_previous %}
+                <a href="?page={{posts.previous_page_number}}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            {% endif %}
+        </li>
+        {% for page_num in posts.paginator.page_range %}
+        <li><a href="?page={{page_num}}">{{ page_num }}</a></li>
+        {% endfor %}
+        <li> 
+            {% if posts.has_next %}
+                <a href="?page={{posts.next_page_number}}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            {% endif %}
+        </li>
+    </ul>
 {% endblock %}
 
 
