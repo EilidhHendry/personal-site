@@ -20,6 +20,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^$', 'home.views.index'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^about-me/', 'home.views.about_me'),
+    url(r'^resume/', 'home.views.resume'),
+    url(r'^projects/', 'home.views.projects'),
     url(r'^blog/', 'blogengine.views.getRecentPosts'),
     url(r'^post/(?P<pk>[0-9]+)/$', 'blogengine.views.post_detail', name='post_detail'),
 ]
