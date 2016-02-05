@@ -8,3 +8,5 @@ class Project(models.Model):
     date_end = models.DateField(default=date.today)
     link = models.URLField(blank=True)
 
+    def __unicode__(self):
+        return self.title
