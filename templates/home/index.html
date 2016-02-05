@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 {% block content %}
-    <div class="jumbotron">
-        <h1> Hello, I'm Eilidh. </h1>
-        <p>I am a graduate Computer Scientist who...</p>
-        <p><a class="btn btn-default btn-lg" href="/resume" role="button">CV</a></p>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/index.css' %}" />
+</head>
+<div class="container-fluid" id="header">
+    <div class="row">
+        <div class="header-content">
+            <h1> Hello, I'm Eilidh. </h1>
+            <p>I am a graduate Computer Scientist who...</p>
+            <p><a class="btn btn-default btn-lg" href="/resume" role="button">CV</a></p>
+        </div>
     </div>
+</div>
 {% endblock %}

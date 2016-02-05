@@ -1,0 +1,23 @@
+.page-header {
+    margin: 20px 0 !important;
+}
+
+#header {
+    background: url("img/background.jpg") top center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: auto;
+    text-align: center;
+}
+
+.header-content {
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.bg-image {
+    position: relative;
+}
+
