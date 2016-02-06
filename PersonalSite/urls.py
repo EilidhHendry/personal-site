@@ -17,14 +17,17 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from home import views as homeviews
+from blogengine import views as blogengineviews
+
 urlpatterns = [
-    url(r'^$', 'home.views.index'),
+    url(r'^$', homeviews.index),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^about-me/', 'home.views.about_me'),
-    url(r'^resume/', 'home.views.resume'),
-    url(r'^projects/', 'home.views.projects'),
-    url(r'^blog/', 'blogengine.views.getRecentPosts'),
-    url(r'^post/(?P<pk>[0-9]+)/$', 'blogengine.views.post_detail', name='post_detail'),
+    url(r'^about-me/', homeviews.about_me),
+    url(r'^resume/', homeviews.resume),
+    url(r'^projects/', homeviews.projects),
+    url(r'^blog/', blogengineviews.getRecentPosts),
+    url(r'^post/(?P<pk>[0-9]+)/$', blogengineviews.post_detail, name='post_detail'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
