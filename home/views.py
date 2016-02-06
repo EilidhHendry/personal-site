@@ -5,7 +5,7 @@ def index(request):
     return render(request, 'home/index.html')
 
 def about_me(request):
-    return render(request, 'home/about_me.html')
+    return render(request, 'home/about_me.html', {'sizes': ['100', '150', '200']})
 
 def resume(request):
     return render(request, 'home/resume.html')

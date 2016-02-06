@@ -4,17 +4,16 @@
 {% load instagram_client %}
 <head>
     <link rel="stylesheet" href="{% static 'home/css/aboutme.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.js"></script>
 </head>
-{% instagram_recent_media count=12 %}
-<div id="django_recent_media_wall">
+{% instagram_recent_media count=100 %}
+<div class="js-packery" id="images" data-packery-options='{ "itemSelector": ".image_container", "gutter": 10}'>
     {% for media in recent_media %}
-    <div class="django_instagram_media_wall_item">
-        <div class="image_container">test 
-            <a href="{{media.link}}" target="_blank" title="{{media.caption.text}}">
-                <img src="{{media|thumbnail}}"/>
-            </a>
-        </div>
-    </div>
+        <a href="{{media.link}}" target="_blank" title="{{media.caption.text}}">
+            <div class="image_container ">
+                <img src="{{media|thumbnail}}" style="width: {{ sizes|random }}px"/>
+            </div>
+        </a>
     {% endfor %}
  </div>
 {% endblock %}
