@@ -8,8 +8,8 @@
             </div>
             <div class="panel-body">
                 <p>{{ project.summary }}</p>
-                <p>{{ project.date_start}} - {{ project.date_end }}</p>
-                <p><a class="btn btn-default" href="{{page.link}}" role="button">View</a></p>
+                <p>{{ project.date_start}} - {% if project.date_end %} {{ project.date_end }} {% else %} Present {% endif %} </p>
+                <p><a class="btn btn-default" href="{{project.link}}" role="button">View</a></p>
             </div>
         </div>
     {% endfor %}

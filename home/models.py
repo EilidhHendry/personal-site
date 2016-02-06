@@ -5,7 +5,7 @@ class Project(models.Model):
     title = models.CharField(max_length = 100)
     summary = models.TextField()
     date_start = models.DateField()
-    date_end = models.DateField(default=date.today)
+    date_end = models.DateField(null=True, blank=True)
     link = models.URLField(blank=True)
 
     def __unicode__(self):
