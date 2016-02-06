@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response, render, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from blogengine.models import Post
 
@@ -17,8 +17,8 @@ def getRecentPosts(request):
         # if page out of range give last page
         post_list = paginator.page(paginator.num_pages) 
     
-    return render(request, 'blog/posts.html', {'posts':post_list})
+    return render(request, 'blogengine/posts.html', {'posts':post_list})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    return render(request, 'blogengine/post_detail.html', {'post': post})

@@ -2,3 +2,16 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+.page-header {
+    margin: 20px 0 !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#page-container {
+    /* as navbar is positioned absolutely,
+     * need to move page contents down by its height */
+    margin-top: 51px;
+}
