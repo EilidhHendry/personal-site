@@ -13,5 +13,5 @@ html {
 #page-container {
     /* as navbar is positioned absolutely,
      * need to move page contents down by its height */
-    margin-top: 51px;
+    padding-top: 51px;
 }
