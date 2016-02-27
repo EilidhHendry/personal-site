@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^projects/', homeviews.projects),
     url(r'^blog/', blogengineviews.getRecentPosts),
     url(r'^post/(?P<pk>[0-9]+)/$', blogengineviews.post_detail, name='post_detail'),
+    url(r'^contact/$', homeviews.contact, name='contact'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
