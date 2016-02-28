@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jasny-bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <title>Eilidh Hendry's Site</title>
@@ -23,12 +24,13 @@
                         </button>
                         <a class="navbar-brand" href="/">Eilidh Hendry</a>
                     </div>
-                    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                    <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="/blog"/>Blog</a></li>
-                            <li><a href="/about-me"/>About Me</a></li>
-                            <li><a href="/resume"/>Resume</a></li>
-                            <li><a href="/projects"/>Projects</a></li>
+                            <li><a href="{% url 'blog' %}"/>Blog</a></li>
+                            <li><a href="{% url 'about_me' %}"/>About Me</a></li>
+                            <li><a href="{% url 'resume' %}"/>Resume</a></li>
+                            <li><a href="{% url 'projects' %}"/>Projects</a></li>
+                            <li><a href="{% url 'contact' %}"/>Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="https://github.com/EilidhHendry"><i class="fa fa-github"></i></a></li>
@@ -45,5 +47,6 @@
         </div>
         <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jasny-bootstrap.min.js' %}"></script>
     </body>
 </html>
