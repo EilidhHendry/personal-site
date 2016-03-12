@@ -2,3 +2,4 @@
 .DS_STORE
 db.sqlite3
 *.sw*
+**/.sass-cache

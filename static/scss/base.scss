@@ -1,0 +1,31 @@
+@import "style";
+@import "components.hamburger";
+@import "components.navbar";
+
+html {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+ }
+
+.page-header {
+    margin: 20px 0 !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#page-container {
+    /* as navbar is positioned absolutely,
+     * need to move page contents down by its height */
+    margin-top: -20px;
+}
+
+#social-icons {
+    text-align: center;
+}
+
+#social-icons a {
+    color: $textHeaderColor !important;
+    font-size: 16px;
+    padding: 20px;
+}
