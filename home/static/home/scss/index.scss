@@ -1,11 +1,17 @@
 @import "style";
 
+body {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
 #header {
     height: 100vh;
     background-color: $backgroundColor;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: -80px;
 
     .button {
         background-color: $backgroundColor !important;
@@ -16,7 +22,7 @@
 
 #header-content {
     position: relative;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;

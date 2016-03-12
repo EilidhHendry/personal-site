@@ -12,8 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
     <title>Eilidh Hendry's Site</title>
 </head>
-<body class="canvas-slid" style="position: relative; overflow: hidden;">
-    <div class="navbar navbar-default"></div>
+<body>
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
         <a class="navmenu-brand" href="/">Eilidh Hendry</a>
         <ul class="nav navmenu-nav">
@@ -35,8 +34,10 @@
             <span>toggle menu</span>
         </button>
     </div>
+    <div id="page-container">
     {% block content %}
     {% endblock content %}
+    </div>
     <script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jasny-bootstrap.min.js' %}"></script>

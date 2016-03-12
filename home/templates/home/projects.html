@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'home/css/projects.css' %}">
+</head>
+<div id="projects-container" class="row">
     {% for project in projects %}
+    <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title"> {{ project.title }}</div>
@@ -12,5 +17,8 @@
                 <p><a class="btn btn-default" href="{{project.link}}" role="button">View</a></p>
             </div>
         </div>
+    </div>
+
     {% endfor %}
+</div>
 {% endblock %}

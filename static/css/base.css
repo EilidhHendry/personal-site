@@ -97,40 +97,30 @@
   float: left;
   margin-left: 15px; }
 
+.navbar {
+  background-color: #252839 !important;
+  border: none; }
+
 @media (min-width: 0) {
   .navbar-toggle {
     display: block;
     /* force showing the toggle */ } }
-@media (min-width: 992px) {
-  body {
-    padding: 0; }
-
-  .navbar {
-    right: auto;
-    border: none;
-    background-color: #252839 !important;
-    height: 70px; } }
 html {
   height: 100%;
   font-family: 'Raleway', sans-serif; }
 
-.page-header {
-  margin: 20px 0 !important;
-  position: absolute;
-  top: 0px;
-  left: 0px; }
-
 #page-container {
-  /* as navbar is positioned absolutely,
-   * need to move page contents down by its height */
-  margin-top: -20px; }
+  margin-top: 90px; }
 
 #social-icons {
   text-align: center; }
 
 #social-icons a {
-  color: #f2b632 !important;
   font-size: 16px;
   padding: 20px; }
+
+.panel-heading {
+  background-color: #252839 !important;
+  color: #f2b632 !important; }
 
 /*# sourceMappingURL=base.css.map */

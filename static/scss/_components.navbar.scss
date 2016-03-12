@@ -24,20 +24,14 @@
     margin-left: 15px;
 }
 
+.navbar {
+    background-color: $backgroundColor !important;
+    border: none;
+}
+
+
 @media (min-width: 0) {
     .navbar-toggle {
         display: block; /* force showing the toggle */
     }
-}
-
-@media (min-width: 992px) {
-    body {
-        padding: 0;
-    }
-    .navbar {
-        right: auto;
-        border: none;
-        background-color: $backgroundColor !important;
-        height: 70px;
-        }
 }
