@@ -1,0 +1,13 @@
+# copy to /etc/nginx/sites-available/
+# symlink to /etc/nginx/sites-enabled/
+server {
+        listen 80 default_server;
+
+	# uncomment to only listen on this hostname
+        # server_name www.eilidhhendry.com;
+
+        error_log /var/log/nginx/error.log;
+        location / {
+                proxy_pass http://localhost:8000;
+        }
+}
