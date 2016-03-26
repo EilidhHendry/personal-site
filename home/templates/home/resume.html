@@ -1,5 +1,46 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>Resume</p>
+<h3>Education</h3>
+{% for edu_item in education %}
+<div class="row">
+    <div class="col-md-4">
+        <p>{{edu_item.institution}}</p>
+        <p>{{edu_item.start_date}} - {{edu_item.end_date}}</p>
+    </div>
+    <div class="col-md-6">
+        <p>{{edu_item.degree}}</p>
+        <p>{{edu_item.summary}}</p>
+    </div>
+</div>
+{% endfor %}
+<h3>Projects</h3>
+{% for project in project_list %}
+<div class="row">
+    <div class="col-md-4">
+        <p>{{project.title}}</p>
+        <p>{{project.start_date}} - {{project.end_date}}</p>
+    </div>
+    <div class="col-md-6">
+        <p>{{project.summary}}</p>
+        <p><i>{{project.technologies}}</i></p>
+        <p><a href="{{project.github}}">Github</a> {{project.website}}</p>
+    </div>
+</div>
+{% endfor %}
+<h3>Experience</h3>
+{% for job in job_list %}
+<div class="row">
+    <div class="col-md-4">
+        <p>{{job.company}}</p>
+        <p>{{job.location}}</p>
+        <p>{{job.start_date}} - {{job.end_date}}</p>
+    </div>
+    <div class="col-md-6">
+        <p>{{job.job_title}}</p>
+        <p>{{job.description}}</p>
+        <p><i>{{job.technologies}}</i></p>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

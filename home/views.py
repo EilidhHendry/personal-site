@@ -3,7 +3,7 @@ from django.template.loader import get_template
 from django.core.mail import EmailMessage
 from django.template import Context
 
-from home.models import Project
+from home.models import Project, Education, Job
 from home.forms import ContactForm
 
 def index(request):
@@ -13,7 +13,14 @@ def about_me(request):
     return render(request, 'home/about_me.html', {'sizes': ['100', '150', '200']})
 
 def resume(request):
-    return render(request, 'home/resume.html')
+    education = Education.objects.all()
+    project_list = Project.objects.all()
+    job_list = Job.objects.all()
+    return render(request, 'home/resume.html', {
+        'education': education,
+        'project_list': project_list,
+        'job_list': job_list
+        })
 
 def projects(request):
     project_list = Project.objects.all()
