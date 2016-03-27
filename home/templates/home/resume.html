@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% for info_item in personal_info %}
+    <p><b>Email:</b> <a href="mailto:{{info_item.email}}">{{info_item.email}}</a></p>
+    <p><b>LinkedIn:</b> <a href="{{info_item.linkedin}}">{{info_item.linkedin}}</a></p>
+    <p><b>GitHub</b> <a href="{{info_item.github}}">{{info_item.github}}</a></p>
+{% endfor %} 
+<p>{{overview.text}}</p>
 <h3>Education</h3>
 {% for edu_item in education %}
 <div class="row">
@@ -24,7 +30,12 @@
     <div class="col-md-6">
         <p>{{project.summary}}</p>
         <p><i>{{project.technologies}}</i></p>
-        <p><a href="{{project.github}}">Github</a> {{project.website}}</p>
+        {% if project.github %}
+            <p><b>Github: </b><a href="{{project.github}}">{{project.github}}</a></p>
+        {% endif %}
+        {% if project.website %}
+            <p><b>Website: </b><a href="{{project.website}}">{{project.website}}</a></p>
+        {% endif %}
     </div>
 </div>
 {% endfor %}

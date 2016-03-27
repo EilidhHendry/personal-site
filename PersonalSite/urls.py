@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
+from redactor import urls as redactor_urls
 from home import views as homeviews
 from blogengine import views as blogengineviews
 
@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^contact/$', homeviews.contact, name='contact'),
     url(r'^blog/', blogengineviews.getRecentPosts, name='blog'),
     url(r'^post/(?P<pk>[0-9]+)/$', blogengineviews.post_detail, name='post_detail'),
+    url(r'^redactor/', include(redactor_urls)),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

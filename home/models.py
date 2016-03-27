@@ -8,7 +8,7 @@ class Project(models.Model):
     end_date = models.DateField(null=True, blank=True)
     github = models.URLField(blank=True)
     website = models.URLField(blank=True)
-    technologies = models.TextField(blank=True)
+    technologies = models.TextField()
 
     def __unicode__(self):
         return self.title
@@ -20,6 +20,9 @@ class Education(models.Model):
     end_date = models.DateField()
     summary = models.TextField()
 
+    def __unicode__(self):
+        return self.degree
+
 class Job(models.Model):
     company = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
@@ -28,3 +31,26 @@ class Job(models.Model):
     end_date = models.DateField()
     description = models.TextField()
     technologies = models.TextField()
+
+    def __unicode__(self):
+        return " ".join([self.company, self.job_title])
+
+class PersonalInfo(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    linkedin = models.URLField(blank=True)
+    github = models.URLField(blank=True)
+    location = models.CharField(max_length=100)
+
+    def full_name(self):
+        return " ".join([self.first_name, self.last_name])
+
+    def __unicode__(self):
+        return self.full_name()
+
+class Overview(models.Model):
+    text = models.TextField()
+
+    def __unicode__(self):
+        return self.text[0:20]
