@@ -16,7 +16,7 @@
     </div>
     <div class="col-md-6">
         <p>{{edu_item.degree}}</p>
-        <p>{{edu_item.summary}}</p>
+        <p>{{edu_item.summary | safe}}</p>
     </div>
 </div>
 {% endfor %}
@@ -28,7 +28,7 @@
         <p>{{project.start_date}} - {{project.end_date}}</p>
     </div>
     <div class="col-md-6">
-        <p>{{project.summary}}</p>
+        <p>{{project.summary | safe}}</p>
         <p><i>{{project.technologies}}</i></p>
         {% if project.github %}
             <p><b>Github: </b><a href="{{project.github}}">{{project.github}}</a></p>
@@ -49,7 +49,7 @@
     </div>
     <div class="col-md-6">
         <p>{{job.job_title}}</p>
-        <p>{{job.description}}</p>
+        <p>{{job.descriptioni | safe}}</p>
         <p><i>{{job.technologies}}</i></p>
     </div>
 </div>
