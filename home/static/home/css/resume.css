@@ -2,10 +2,12 @@
   padding: 20px 30px; }
 
 #heading-section {
-  background-color: #3F2860;
-  color: #F1831D;
+  background-color: #607D8B;
+  color: #FFFFFF;
   padding: 40px 60px;
   border-radius: 4px 4px 0 0; }
+  #heading-section h2 {
+    color: #FFC107; }
   #heading-section a {
     color: white; }
 
@@ -13,11 +15,11 @@
   padding-top: 50px; }
 
 .resume-section {
-  border-top: 1px solid black;
+  border-top: 1px solid #B6B6B6;
   padding: 20px 60px; }
 
 .section-title {
-  color: #3F2860; }
+  color: #607D8B; }
 
 .left-column p {
   margin: 0px !important; }

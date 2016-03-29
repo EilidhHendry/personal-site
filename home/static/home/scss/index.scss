@@ -1,22 +1,24 @@
 @import "style";
 
-body {
-    position: relative !important;
-    overflow: hidden !important;
+html, body {
+    height: 100%
+}
+
+#page-container {
+    margin-top: 0 !important;
 }
 
 #header {
     height: 100vh;
-    background-color: $backgroundColor;
+    background-color: $primaryColor;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-top: -80px;
 
     .button {
-        background-color: $backgroundColor !important;
-        border: 1px solid $textHeaderColor !important;
-        color: $textHeaderColor !important;
+        background-color: $primaryColor !important;
+        border: 1px solid $accentColor !important;
+        color: $accentColor !important;
     }
 }
 
@@ -26,10 +28,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: $textPaleColor;
+    color: $lightPrimaryColor;
 
     h1 {
         font-size: 50px;
-        color: $textHeaderColor;
+        color: $accentColor;
     }
 }

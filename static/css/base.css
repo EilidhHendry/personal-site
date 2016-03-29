@@ -27,7 +27,7 @@
   left: 18px;
   right: 18px;
   height: 5px;
-  background: #f2b632; }
+  background: #FFC107; }
 
 .c-hamburger span::before,
 .c-hamburger span::after {
@@ -36,7 +36,7 @@
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: #f2b632;
+  background-color: #FFC107;
   content: ""; }
 
 .c-hamburger span::before {
@@ -46,7 +46,7 @@
   bottom: -10px; }
 
 .c-hamburger--htla {
-  background-color: #252839; }
+  background-color: #607D8B; }
 
 .c-hamburger--htla span {
   transition: transform 0.3s; }
@@ -61,7 +61,7 @@
 
 /* active state, i.e. menu open */
 .c-hamburger--htla.is-active {
-  background-color: #252839; }
+  background-color: #607D8B; }
 
 .c-hamburger--htla.is-active span {
   transform: rotate(180deg); }
@@ -80,25 +80,25 @@
 
 .navmenu {
   padding-right: 20px;
-  background-color: #e9e9e9;
+  background-color: white;
   border: none !important; }
 
 .navmenu-brand {
-  color: #252839 !important; }
+  color: #212121 !important; }
 
 .navmenu-nav li {
-  border-top: 1px solid #252839;
+  border-top: 1px solid #B6B6B6;
   text-transform: uppercase;
   padding: 10px 0; }
   .navmenu-nav li a {
-    color: #252839 !important; }
+    color: #727272 !important; }
 
 .navbar-toggle {
   float: left;
   margin-left: 15px; }
 
 .navbar {
-  background-color: #252839 !important;
+  background-color: #607D8B !important;
   border: none; }
 
 @media (min-width: 0) {
@@ -120,7 +120,7 @@ html {
   padding: 20px; }
 
 .panel-heading {
-  background-color: #252839 !important;
-  color: #f2b632 !important; }
+  background-color: #607D8B !important;
+  color: #FFC107 !important; }
 
 /*# sourceMappingURL=base.css.map */
