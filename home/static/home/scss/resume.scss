@@ -1,0 +1,35 @@
+@import "style";
+
+#resume-container {
+    padding: 20px 30px;
+}
+#heading-section {
+    background-color: $backgroundColor;
+    color: $textHeaderColor;
+    padding: 40px 60px;
+    border-radius: 4px 4px 0 0;
+
+    a {
+        color: white;
+    }
+}
+
+#overview-section {
+    padding-top: 50px;
+}
+
+.resume-section {
+    border-top: 1px solid black;
+    padding: 20px 60px;
+}
+
+.section-title {
+    color: $backgroundColor;
+}
+
+.left-column {
+    p {
+        margin: 0px !important;
+    }
+}
+

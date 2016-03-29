@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import date
+from time import strftime
 
 class Project(models.Model):
     title = models.CharField(max_length = 100)
@@ -17,7 +17,7 @@ class Education(models.Model):
     institution = models.CharField(max_length=100)
     degree = models.CharField(max_length=100)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(blank=True)
     summary = models.TextField()
 
     def __unicode__(self):
@@ -28,7 +28,7 @@ class Job(models.Model):
     location = models.CharField(max_length=100)
     job_title = models.CharField(max_length=100)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(blank=True)
     description = models.TextField()
     technologies = models.TextField()
 

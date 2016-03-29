@@ -1,0 +1,25 @@
+#resume-container {
+  padding: 20px 30px; }
+
+#heading-section {
+  background-color: #3F2860;
+  color: #F1831D;
+  padding: 40px 60px;
+  border-radius: 4px 4px 0 0; }
+  #heading-section a {
+    color: white; }
+
+#overview-section {
+  padding-top: 50px; }
+
+.resume-section {
+  border-top: 1px solid black;
+  padding: 20px 60px; }
+
+.section-title {
+  color: #3F2860; }
+
+.left-column p {
+  margin: 0px !important; }
+
+/*# sourceMappingURL=resume.css.map */

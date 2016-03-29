@@ -12,8 +12,8 @@
                 <div class="panel-title"> {{ project.title }}</div>
             </div>
             <div class="panel-body">
-                <p>{{ project.summary }}</p>
-                <p>{{ project.date_start}} - {% if project.date_end %} {{ project.date_end }} {% else %} Present {% endif %} </p>
+                <p>{{ project.summary | safe}}</p>
+                <p>{{ project.date_start | date: "M Y"}} - {% if project.date_end %} {{ project.date_end }} {% else %} Present {% endif %} </p>
                 <p><a class="btn btn-default" href="{{project.link}}" role="button">View</a></p>
             </div>
         </div>

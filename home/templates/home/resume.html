@@ -1,57 +1,88 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
-{% for info_item in personal_info %}
-    <p><b>Email:</b> <a href="mailto:{{info_item.email}}">{{info_item.email}}</a></p>
-    <p><b>LinkedIn:</b> <a href="{{info_item.linkedin}}">{{info_item.linkedin}}</a></p>
-    <p><b>GitHub</b> <a href="{{info_item.github}}">{{info_item.github}}</a></p>
-{% endfor %} 
-<p>{{overview.text}}</p>
-<h3>Education</h3>
-{% for edu_item in education %}
-<div class="row">
-    <div class="col-md-4">
-        <p>{{edu_item.institution}}</p>
-        <p>{{edu_item.start_date}} - {{edu_item.end_date}}</p>
+<head>
+    <link rel="stylesheet" href="{% static 'home/css/resume.css' %}">
+</head>
+<div id="resume-container" class="container">
+
+    <div id="heading-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Eilidh Hendry</h2>
+            </div>
+            <div class="col-md-6">
+                {% for info_item in personal_info %}
+                    <p><b>Email:</b> <a href="mailto:{{info_item.email}}">{{info_item.email}}</a></p>
+                    <p><b>LinkedIn:</b> <a href="{{info_item.linkedin}}">{{info_item.linkedin}}</a></p>
+                    <p><b>GitHub</b> <a href="{{info_item.github}}">{{info_item.github}}</a></p>
+                {% endfor %} 
+            </div>
+        </div>
+        <div id="overview-section">
+            {% for overview_item in overview %}
+            <p>{{overview_item.text}}</p>
+            {% endfor %}
+        </div>
     </div>
-    <div class="col-md-6">
-        <p>{{edu_item.degree}}</p>
-        <p>{{edu_item.summary | safe}}</p>
+
+    <div class="resume-section">
+        <h3 class="section-title">Education</h3>
+        {% for edu_item in education %}
+        <div class="row">
+            <div class="col-md-6 left-column">
+                <p>{{edu_item.institution}}</p>
+                <p>{{edu_item.start_date | date:"M Y"}} - {% if edu_item.end_date %} {{edu_item.end_date | date:"M Y"}} {% else %} Present {% endif %}</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{edu_item.degree}}</p>
+                <p>{{edu_item.summary | safe}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="resume-section">
+        <h3 class="section-title">Projects</h3>
+        {% for project in project_list %}
+        <div class="row">
+            <div class="col-md-6 left-column">
+                <p>{{project.title}}</p>
+                <p>{{project.start_date | date:"M Y"}} - {% if project.end_date %} {{project.end_date | date:"M Y"}} {% else %} Present {% endif %}</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{project.summary | safe}}</p>
+                <p><i>{{project.technologies}}</i></p>
+                {% if project.github %}
+                    <p><b>Github: </b><a href="{{project.github}}">{{project.github}}</a></p>
+                {% endif %}
+                {% if project.website %}
+                    <p><b>Website: </b><a href="{{project.website}}">{{project.website}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="resume-section">
+        <h3 class="section-title">Experience</h3>
+        {% for job in job_list %}
+        <div class="row">
+            <div class="col-md-6 left-column">
+                <p>{{job.company}}</p>
+                <p>{{job.location}}</p>
+                <p>{{job.start_date | date:"M Y" }} - {% if job.end_date %} {{job.end_date | date:"M Y" }} {% else %} Present {% endif %}</p>
+            </div>
+            <div class="col-md-6">
+                <p>{{job.job_title}}</p>
+                <p>{{job.descriptioni | safe}}</p>
+                <p><i>{{job.technologies}}</i></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
     </div>
 </div>
-{% endfor %}
-<h3>Projects</h3>
-{% for project in project_list %}
-<div class="row">
-    <div class="col-md-4">
-        <p>{{project.title}}</p>
-        <p>{{project.start_date}} - {{project.end_date}}</p>
-    </div>
-    <div class="col-md-6">
-        <p>{{project.summary | safe}}</p>
-        <p><i>{{project.technologies}}</i></p>
-        {% if project.github %}
-            <p><b>Github: </b><a href="{{project.github}}">{{project.github}}</a></p>
-        {% endif %}
-        {% if project.website %}
-            <p><b>Website: </b><a href="{{project.website}}">{{project.website}}</a></p>
-        {% endif %}
-    </div>
-</div>
-{% endfor %}
-<h3>Experience</h3>
-{% for job in job_list %}
-<div class="row">
-    <div class="col-md-4">
-        <p>{{job.company}}</p>
-        <p>{{job.location}}</p>
-        <p>{{job.start_date}} - {{job.end_date}}</p>
-    </div>
-    <div class="col-md-6">
-        <p>{{job.job_title}}</p>
-        <p>{{job.descriptioni | safe}}</p>
-        <p><i>{{job.technologies}}</i></p>
-    </div>
-</div>
-{% endfor %}
 {% endblock %}
