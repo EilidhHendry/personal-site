@@ -13,8 +13,15 @@
             </div>
             <div class="panel-body">
                 <p>{{ project.summary | safe}}</p>
-                <p>{{ project.date_start | date: "M Y"}} - {% if project.date_end %} {{ project.date_end }} {% else %} Present {% endif %} </p>
-                <p><a class="btn btn-default" href="{{project.link}}" role="button">View</a></p>
+                <p>{{ project.date_start|date:"M Y"}} - {% if project.date_end %} {{ project.date_end }} {% else %} Present {% endif %} </p>
+		<div class="btn-group" role="group">
+		    {% if project.github %}
+		        <a class="btn btn-default button" href="{{project.github}}" role="button">Github</a>
+		    {% endif %}
+		    {% if project.website %}
+		        <a class="btn btn-default button" href="{{project.website}}" role="button">Website</a>
+		    {% endif %}
+		</div>
             </div>
         </div>
     </div>
