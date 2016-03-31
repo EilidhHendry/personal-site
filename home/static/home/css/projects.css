@@ -1,4 +1,12 @@
 #projects-container {
   margin: 30px 30px !important; }
 
+.btn-toolbar {
+  text-align: center; }
+  .btn-toolbar .btn {
+    float: none !important; }
+
+.button {
+  margin: 10px; }
+
 /*# sourceMappingURL=projects.css.map */
