@@ -13,7 +13,7 @@
             </div>
             <div class="panel-body">
                 <p>{{ project.summary | safe}}</p>
-                <p>{{ project.date_start|date:"M Y"}} - {% if project.date_end %} {{ project.date_end }} {% else %} Present {% endif %} </p>
+                <p>{{ project.start_date | date:"M Y"}} - {% if project.end_date %} {{ project.end_date }} {% else %} Present {% endif %} </p>
 		<div class="btn-toolbar" role="group">
 		    {% if project.github %}
 		        <a class="btn btn-default button-project" href="{{project.github}}" role="button">Github</a>

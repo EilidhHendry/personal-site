@@ -26,7 +26,6 @@ urlpatterns = [
     url(r'^about-me/', homeviews.about_me, name='about_me'),
     url(r'^resume/', homeviews.resume, name='resume'),
     url(r'^projects/', homeviews.projects, name='projects'),
-    url(r'^contact/$', homeviews.contact, name='contact'),
     url(r'^blog/', blogengineviews.getRecentPosts, name='blog'),
     url(r'^post/(?P<pk>[0-9]+)/$', blogengineviews.post_detail, name='post_detail'),
     url(r'^redactor/', include(redactor_urls)),
