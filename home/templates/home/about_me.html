@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 {% block content %}
 {% load instagram_client %}
-<head>
-    <link rel="stylesheet" href="{% static 'home/css/aboutme.css' %}">
-</head>
 {% instagram_recent_media count=100 %}
 <div class="grid"> 
         {% for media in recent_media %}

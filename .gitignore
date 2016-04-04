@@ -4,3 +4,5 @@ db.sqlite3
 *.sw*
 **/.sass-cache
 /venv/*
+node_modules/
+static/dist

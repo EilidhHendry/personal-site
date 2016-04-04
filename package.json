@@ -1,0 +1,22 @@
+{
+  "name": "personalsite",
+  "version": "1.0.0",
+  "author": "Eilidh Hendry",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EilidhHendry/personal-site.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EilidhHendry/personal-site/issues"
+  },
+  "homepage": "https://github.com/EilidhHendry/personal-site#readme"
+}

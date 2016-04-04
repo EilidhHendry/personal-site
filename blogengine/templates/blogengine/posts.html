@@ -1,14 +1,10 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 
 {% block content %}
-<head>
-    <link rel="stylesheet" type="text/css" href="{% static 'blogengine/css/blog.css' %}" />
-</head>
 
 <div class="posts-container">
     {% for post in posts %}
-    <div class="panel panel-default">
+    <div class="panel">
         <div class="panel-heading">
             <div class="panel-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></div>
             {{ post.published_date }}

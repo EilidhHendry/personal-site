@@ -4,21 +4,19 @@ html, body {
     height: 100%
 }
 
-#page-container {
-    margin-top: 0 !important;
-}
-
 #header {
     height: 100vh;
     background-color: $primaryColor;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-top: -90px;
 
     .button {
         background-color: $primaryColor !important;
         border: 1px solid $accentColor !important;
         color: $accentColor !important;
+        text-shadow: none;
     }
 }
 
