@@ -1,0 +1,17 @@
+#images_container {
+    padding: 20px;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 200px;
+    height: 200px;
+    
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
