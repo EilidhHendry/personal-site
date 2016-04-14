@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load google_analytics %}
 
 <html lang="en">
     <meta charset="utf-8">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'dist/vendor.css' %}" />
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <title>Eilidh Hendry's Site</title>
+    {% google_analytics %}
 </head>
 <body>
     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">

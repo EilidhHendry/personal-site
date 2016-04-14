@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'analytical',
     'redactor',
     'django_instagram',
     'blogengine',
@@ -117,3 +118,5 @@ EMAIL_PORT = 1025
 
 REDACTOR_OPTIONS = {'lang': 'en'}
 REDACTOR_UPLOAD = 'uploads/'
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-76402326-1'
