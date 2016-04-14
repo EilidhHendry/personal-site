@@ -7,7 +7,19 @@ server {
         # server_name www.eilidhhendry.com;
 
         error_log /var/log/nginx/error.log;
+
         location / {
                 proxy_pass http://localhost:8000;
         }
+
+	location /static/ {
+		autoindex on;
+		alias /home/ubuntu/personal-site/static/dist/;
+	}
+
+	location /static/admin {
+		autoindex on;
+		alias /home/ubuntu/personal-site/venv/lib/python2.7/site-packages/django/contrib/admin/static/admin/;
+	}
+
 }
