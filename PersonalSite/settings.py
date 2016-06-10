@@ -39,7 +39,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'analytical',
     'redactor',
-    'django_instagram',
     'blogengine',
     'home',
 )

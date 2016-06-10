@@ -1,14 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load instagram_client %}
-{% instagram_recent_media count=100 %}
-<div class="grid"> 
-        {% for media in recent_media %}
-                <a href="{{media.link}}" target="_blank" title="{{media.caption.text}}">
-                    <div class="grid-item">
-                        <img src="{{media | standard_size}}"/>
-                    </div>
-                </a>
-                {% endfor %}
+
+<div class="container">
+<p>Instagram feed currently unavailable due to changes with Instagram's policy
+with regard to Apps. Please bear with me while I try and fix this!</p>
  </div>
 {% endblock %}
